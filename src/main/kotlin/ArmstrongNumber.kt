@@ -11,7 +11,7 @@ fun main() {
     val numberOfDigits = number.toString().length
     var i = 10
     var digit = 0
-    var cube = 0
+    var power = 0
     var numberOfZeros = 1
     for (j in 1 .. numberOfDigits) {
         numberOfZeros *= 10
@@ -24,10 +24,10 @@ fun main() {
             tempDigit = (tempDigit - digit) * 10 / i
             digit = tempDigit
         }
-        cube += (digit.toDouble().pow(numberOfDigits)).toInt()
+        power += (digit.toDouble().pow(numberOfDigits)).toInt()
         i *= 10
     }
-    if (number == cube) {
+    if (number == power) {
         println("It is an armstrong number")
     } else {
         println("It is not an armstrong number")
