@@ -40,9 +40,9 @@ fun main() {
 
 
 
-/*
+
 // Also finds whether a given number is an armstrong number or not
-fun main() {
+/*fun main() {
     println("Enter a positive number")
     val number = Scanner(System.`in`).nextInt()
     var tempNumber = number
