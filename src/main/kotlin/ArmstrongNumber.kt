@@ -4,7 +4,9 @@ import kotlin.math.pow
 class ArmstrongNumber {
 }
 
-/*fun main() {
+/*
+//finds whether a given number is an armstrong number or not
+fun main() {
     val scan = Scanner(System.`in`)
     println("Enter a positive integer")
     val number = scan.nextInt()
@@ -35,6 +37,11 @@ class ArmstrongNumber {
 }*/
 
 
+
+
+
+/*
+// Also finds whether a given number is an armstrong number or not
 fun main() {
     println("Enter a positive number")
     val number = Scanner(System.`in`).nextInt()
@@ -55,5 +62,44 @@ fun main() {
         println("It is an armstrong number")
     } else {
         println("It is not an armstrong number")
+    }
+}*/
+
+
+
+
+
+
+
+fun main() {
+    println("Enter the number from which you want to get the armstrong numbers")
+    val numStart = Scanner(System.`in`).nextInt()
+    println("Enter the number up to which you want to get the armstrong numbers")
+    val numEnd = Scanner(System.`in`).nextInt()
+    val array = ArrayList<Int>()
+    if (numStart in 0..numEnd) {
+        for (number in numStart .. numEnd) {
+            var tempNumber = number
+            var count = 0
+            var result = 0
+            while (tempNumber > 0) {
+                tempNumber /= 10
+                count++
+            }
+            tempNumber = number
+            while (tempNumber > 0) {
+                val remainder = tempNumber % 10
+                result += (remainder.toDouble().pow(count)).toInt()
+                tempNumber /= 10
+            }
+            if (number == result) {
+                array.add(number)
+            }
+        }
+        array.forEach {
+            println(it)
+        }
+    } else {
+        println("Invalid input")
     }
 }
