@@ -70,8 +70,8 @@ fun main() {
 
 
 
-
-fun main() {
+//Armstrong numbers in a range
+/*fun main() {
     println("Enter the number from which you want to get the armstrong numbers")
     val numStart = Scanner(System.`in`).nextInt()
     println("Enter the number up to which you want to get the armstrong numbers")
@@ -100,6 +100,40 @@ fun main() {
             println(it)
         }
     } else {
-        println("Invalid input")
+        println("Invalid range")
+    }
+}*/
+
+
+
+
+
+//First n armstrong numbers.
+fun main() {
+    println("Enter a positive number")
+    val numberOfTerms = Scanner(System.`in`).nextInt()
+    val infinity = Int.MAX_VALUE
+    var numCount = 0
+    for (current in 1 .. infinity) {
+        var result = 0
+        var count = 0
+        var tempNumber = current
+        while (tempNumber > 0) {
+            tempNumber /= 10
+            count++
+        }
+        tempNumber = current
+        while (tempNumber > 0) {
+            val remainder = tempNumber % 10
+            result += (remainder.toDouble().pow(count)).toInt()
+            tempNumber /= 10
+        }
+        if (current == result ) {
+            println(current)
+            numCount++
+        }
+        if (numCount >= numberOfTerms) {
+            break
+        }
     }
 }
