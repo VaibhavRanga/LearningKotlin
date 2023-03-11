@@ -76,7 +76,6 @@ fun main() {
     val numStart = Scanner(System.`in`).nextInt()
     println("Enter the number up to which you want to get the armstrong numbers")
     val numEnd = Scanner(System.`in`).nextInt()
-    val array = ArrayList<Int>()
     if (numStart in 0..numEnd) {
         for (number in numStart .. numEnd) {
             var tempNumber = number
@@ -93,11 +92,8 @@ fun main() {
                 tempNumber /= 10
             }
             if (number == result) {
-                array.add(number)
+                println(number)
             }
-        }
-        array.forEach {
-            println(it)
         }
     } else {
         println("Invalid range")
