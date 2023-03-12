@@ -3,7 +3,7 @@ import java.util.Scanner
 class FibonacciSeries {
 }
 
-//Prints N terms of Fibonacci series
+//Prints first n terms of Fibonacci series
 /*fun main() {
     println("Enter the number of terms of Fibonacci series that you want\n" +
             "(greater than 0)")
@@ -40,8 +40,8 @@ class FibonacciSeries {
 
 
 
-//Prints the Fibonacci series up to a number
-fun main() {
+//Prints the fibonacci series up to a number
+/*fun main() {
     println("Enter the number up to which you want the Fibonacci series")
     val numEnd = Scanner(System.`in`).nextInt()
     var num1 = 0
@@ -69,5 +69,40 @@ fun main() {
         }
     } else {
         println("Invalid input")
+    }
+}*/
+
+
+
+
+
+
+
+//Prints first n terms of fibonacci series
+fun main() {
+    println("Enter the number of terms of fibonacci series")
+    val numberOfTerms = Scanner(System.`in`).nextInt()
+    var num1 = 0
+    var num2 = 1
+    var count = 3
+    when (numberOfTerms) {
+        1 -> {
+            println(num1)
+        }
+        2 -> {
+            println(num1)
+            println(num2)
+        }
+        else -> {
+            println(num1)
+            println(num2)
+            while (count <= numberOfTerms) {
+                val temp = num1
+                num1 = num2
+                num2 = temp + num1
+                println(num2)
+                count++
+            }
+        }
     }
 }
