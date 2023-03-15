@@ -4,5 +4,4 @@ class Practice {
 }
 
 fun main() {
-
 }
