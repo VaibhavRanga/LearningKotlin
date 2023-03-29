@@ -5,10 +5,6 @@ import java.util.Scanner
 class ExerciseOne {
 }
 fun main() {
-    calculator()
-}
-
-fun calculator () {
     val scan = Scanner(System.`in`)
     do {
         println("Enter 1 for addition, 2 for subtraction, 3 for multiplication or 4 for division")

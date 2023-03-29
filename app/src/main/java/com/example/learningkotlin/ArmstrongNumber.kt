@@ -10,7 +10,7 @@ class ArmstrongNumber {
 //finds whether a given number is an armstrong number or not
 fun main() {
     val scan = Scanner(System.`in`)
-    println("Enter a positive integer")
+    println("Enter a positive integer to check for armstrong")
     val number = scan.nextInt()
     val numberOfDigits = number.toString().length
     var i = 10
@@ -74,7 +74,7 @@ fun main() {
 
 //Armstrong numbers in a range
 /*fun main() {
-    println("Enter the number from which you want to get the armstrong numbers")
+    println("Enter the number from which you want to get the armstrong numbers (greater than 0")
     val numStart = Scanner(System.`in`).nextInt()
     println("Enter the number up to which you want to get the armstrong numbers")
     val numEnd = Scanner(System.`in`).nextInt()
@@ -107,12 +107,12 @@ fun main() {
 
 
 //First n armstrong numbers.
-fun main() {
-    println("Enter a positive number")
+/*fun main() {
+    println("Enter how many armstrong numbers you want to print")
     val numberOfTerms = Scanner(System.`in`).nextInt()
-    val infinity = Int.MAX_VALUE
     var numCount = 0
-    for (current in 1 .. infinity) {
+    var current = 1
+    while (current > 0) {
         var result = 0
         var count = 0
         var tempNumber = current
@@ -130,8 +130,9 @@ fun main() {
             println(current)
             numCount++
         }
-        if (numCount >= numberOfTerms) {
+        if (numCount == numberOfTerms) {
             break
         }
+        current++
     }
-}
+}*/

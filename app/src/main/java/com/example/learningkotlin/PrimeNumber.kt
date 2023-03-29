@@ -5,9 +5,9 @@ import java.util.Scanner
 class PrimeNumber {
 }
 
-// checks whether prime or not
+// checks whether a number is prime or not
 /*fun main() {
-    println("Enter a positive integer")
+    println("Enter a positive integer to check for prime")
     val number = Scanner(System.`in`).nextInt()
     if (number <= 0) {
         println("Invalid input")
