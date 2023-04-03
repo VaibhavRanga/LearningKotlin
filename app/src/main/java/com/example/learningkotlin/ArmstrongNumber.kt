@@ -7,7 +7,7 @@ class ArmstrongNumber {
 }
 
 /*
-//finds whether a given number is an armstrong number or not
+//Checks whether a given number is an armstrong number or not
 fun main() {
     val scan = Scanner(System.`in`)
     println("Enter a positive integer to check for armstrong")
@@ -43,7 +43,7 @@ fun main() {
 
 
 
-// Also finds whether a given number is an armstrong number or not
+//Checks whether a given number is an armstrong number or not
 /*fun main() {
     println("Enter a positive number")
     val number = Scanner(System.`in`).nextInt()
@@ -72,7 +72,7 @@ fun main() {
 
 
 
-//Armstrong numbers in a range
+//Prints armstrong numbers in a range
 /*fun main() {
     println("Enter the number from which you want to get the armstrong numbers (greater than 0")
     val numStart = Scanner(System.`in`).nextInt()
@@ -101,6 +101,52 @@ fun main() {
         println("Invalid range")
     }
 }*/
+
+
+
+
+
+
+
+//Prints armstrong numbers in a range
+/*fun main() {
+    println("Enter the start of range (greater than 0)")
+    val scan = Scanner(System.`in`)
+    val rangeStart = scan.nextInt()
+    println("Enter the end of range (greater than 0)")
+    val rangeEnd = scan.nextInt()
+    if (rangeStart in 1 .. rangeEnd) {
+        val arrayOfArmstrong = ArrayList<Int>()
+        for (number in rangeStart .. rangeEnd) {
+            if (checkArmstrong(number)) {
+                arrayOfArmstrong.add(number)
+            }
+        }
+        println(arrayOfArmstrong)
+    } else {
+        println("Invalid range")
+    }
+}
+fun checkArmstrong(number: Int): Boolean {
+    var tempNumber = number
+    var count = 0
+    while (tempNumber > 0) {
+        tempNumber /= 10
+        count++
+    }
+    tempNumber = number
+    var remainder = 0
+    var sum = 0
+    while (tempNumber > 0) {
+        remainder = tempNumber % 10
+        sum += remainder.toDouble().pow(count).toInt()
+        tempNumber /= 10
+    }
+    return number == sum
+}*/
+
+
+
 
 
 
@@ -135,4 +181,45 @@ fun main() {
         }
         current++
     }
+}*/
+
+
+
+
+
+
+
+//Prints first n armstrong numbers
+/*fun main() {
+    println("Enter n")
+    val requiredTerms = Scanner(System.`in`).nextInt()
+    var currentTerm = 1
+    var number = 1
+    val arrayOfArmstrong = ArrayList<Int>()
+    while (currentTerm <= requiredTerms) {
+        if (checkArmstrong(number)) {
+            arrayOfArmstrong.add(number)
+            currentTerm++
+        }
+        number++
+    }
+    println(arrayOfArmstrong)
+}
+
+fun checkArmstrong(number: Int): Boolean {
+    var tempNumber = number
+    var count = 0
+    while (tempNumber > 0) {
+        tempNumber /= 10
+        count++
+    }
+    tempNumber = number
+    var remainder: Int
+    var sum = 0
+    while (tempNumber > 0) {
+        remainder = tempNumber % 10
+        sum += remainder.toDouble().pow(count).toInt()
+        tempNumber /= 10
+    }
+    return number == sum
 }*/

@@ -57,8 +57,47 @@ class PrimeNumber {
 
 
 
+
+
+//Prime numbers within a range
+/*fun main() {
+    println("Enter start of range (greater than 1)")
+    val scan = Scanner(System.`in`)
+    val rangeStart = scan.nextInt()
+    println("Enter the end of range (greater than 1)")
+    val rangeEnd = scan.nextInt()
+    if (rangeStart in 2 .. rangeEnd) {
+        val arrayOfPrimes = ArrayList<Int>()
+        for (i in rangeStart..rangeEnd) {
+            if (checkPrime(i)) {
+                arrayOfPrimes.add(i)
+            }
+        }
+        println(arrayOfPrimes)
+    } else {
+        println("Invalid range")
+    }
+}
+fun checkPrime(currentNumber: Int): Boolean {
+    var isPrime = true
+    for (i in 2 .. currentNumber / 2) {
+        if (currentNumber % i == 0) {
+            isPrime = false
+            break
+        }
+    }
+    return isPrime
+}*/
+
+
+
+
+
+
+
+
 //Prints first n prime numbers
-fun main() {
+/*fun main() {
     println("Enter how many prime numbers you want")
     val numberOfTerms = Scanner(System.`in`).nextInt()
     val infinity = Int.MAX_VALUE
@@ -79,4 +118,37 @@ fun main() {
             println(current)
         }
     }
+}*/
+
+
+
+
+
+
+
+//Prints first n prime numbers
+/*fun main() {
+    println("Enter n")
+    val requiredCount = Scanner(System.`in`).nextInt()
+    var currentCount = 1
+    var number = 2
+    val arrayOfPrimes = ArrayList<Int>()
+    while (currentCount <= requiredCount) {
+        if (checkPrime(number)) {
+            arrayOfPrimes.add(number)
+            currentCount++
+        }
+        number++
+    }
+    println(arrayOfPrimes)
 }
+fun checkPrime(currentNumber: Int): Boolean {
+    var isPrime = true
+    for (i in 2 .. currentNumber / 2) {
+        if (currentNumber % i == 0) {
+            isPrime = false
+            break
+        }
+    }
+    return isPrime
+}*/
